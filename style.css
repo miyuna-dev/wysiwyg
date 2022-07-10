@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&display=swap');
+:root {
+    --clr-neutral-100: #fff;
+    --clr-neutral-900: #000;
+    --clr-primary-300: #FFCCDC;
+    --clr-primary-400: #FFB9CF;
+
+    --ff-primary: 'Dongle', sans-serif;
+
+    --fs-heading-200: 2.2rem;
+    --fs-heading-400: 3rem;
+    --fs-base: 2rem;
+    --fs-label: 1.9rem;
+    --fs-button: 1.5rem;
+
+    --fw-h3-200: 300;
+    --fw-h3-300: 400;
+    --fw-h3-400: 500;
+    --fw-h3-500: 600;
+
+    --line-height: 1.5;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+      scroll-behavior: smooth;
+    }
+  
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+   
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    display: grid;
+    place-content: center;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-base);
+}
+
+h1 {
+    color: var(--clr-primary-400);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+    font-size: var(--fs-heading-400);
+}
+
+h1:before,
+h1:after {
+    content: "";
+    flex: 1 1;
+    border-bottom: 3px solid var(--clr-primary-300);
+    margin-bottom: 2rem;
+}
+
+main {
+    transition: all 250ms ease-in-out;
+    text-align: center;
+    width: 30em;
+    height: 22em;
+    padding: .1em 1em;
+
+    box-shadow: .1em .1em .5em .1em var(--clr-primary-300);
+    border: 1px solid var(--clr-primary-300);
+    border-radius: 10px;
+}
+
+.main-content {
+    display: block;
+    margin: .1rem auto;
+}
+
+h3 {
+    margin-top: 2rem;
+    font-size: var(--fs-heading-200);
+    font-weight: var(--fw-h3-300);
+    border-bottom: 2px solid var(--clr-primary-300);
+}
+
+.modify-buttons {
+    margin-top: 2.5rem;
+    text-align: center;
+}
+
+button {
+    width: 1.8em;
+    font-size: var(--fs-button);
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-h3-300);
+    padding: .2em .2em .2em .5em;
+    background: none;
+    border-radius: 4px;
+    border: 2px solid var(--clr-primary-300);
+    cursor: pointer;
+}
+
+button:hover {
+    box-shadow: .1em .1em .5em .1em var(--clr-primary-300);
+}
+
+.text_input {
+    resize: none;
+    text-align: center;
+    width: 28em;
+    height: 7em;
+    padding: .2rem;
+    font-weight: var(--fw-h3-200);
+    border-radius: 8px;
+    border-color: var(--clr-primary-400);
+}
+
+.save {
+    margin-top: .8rem;
+    width: 8rem;
+}
+
+#display {
+    font-weight: var(--fw-h3-200);
+}

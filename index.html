@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+<body>
+    <h1>Text Editor</h1>
+    <main>
+        <div class="main-content">
+            <h3>Change the text however you want</h3>
+            
+            <div class="modify-buttons"></div>
+
+            <textarea class="text_input" id="selectable" cols="80" rows="6"></textarea>
+            <button class="save">Sauvegarder</button>
+            <div id="display"></div>
+        </div>
+
+    </main>
+    <script type="text/javascript" src="my_wysiwyg.js"></script>
+    <script>
+        $ ( " textarea " ) . my_wysiwyg (
+            {
+            color : " black " ,
+            backgroundColor: " whitesmoke ",
+            button: " bold ",
+            }
+        ) ;
+        $(document).ready(function(){
+            AutoSave.start();
+        })
+  
+        $(window).unload(function(){
+            AutoSave.stop();
+        });
+    </script>
+</body>
+</html>
